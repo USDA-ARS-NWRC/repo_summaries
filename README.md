@@ -3,20 +3,20 @@
 ## Core Software
 
 ### AWSM
-Automated Water Supply Model (AWSM) was developed at the USDA Agricultural
-Research Service (ARS) in Boise, ID. AWSM was designed to streamline the
-workflow used by the ARS to forecast the water supply of multiple water basins.
-AWSM standardizes the steps needed to distribute met. data with SMRF, run an
-energy and mass balance with iSnobal or PySnobal, and process the results,
-while maintaining the flexibility of each program.
+Automated Water Supply Model (AWSM) was designed to streamline the
+work-flow used by the USDA Agricultural Research Service (ARS) to forecast
+the water supply of multiple water basins. AWSM standardizes the steps needed
+to distribute met. data with SMRF, run a snow energy and mass balance with
+iSnobal or PySnobal, and process the results with SNOWAV, while maintaining
+the flexibility of each program.
 * Automated & streamlined water supply forecasts
 * Manages modules to perform each task
 
-### Weather Inputs
-Weather inputs include meteorologic station data, gridded Weather Research and
+### Weather Data
+Weather data includes meteorologic station data, gridded Weather Research and
 Forecasting Model (WRF) forecast data, and data from other atmospheric models.  
-Met. station weather data can be automatically downloaded and stored with the
-[WeatherDatabase](https://github.com/USDA-ARS-NWRC/WeatherDatabase) tool.
+Met. station weather data can be automatically downloaded, cleaned, and stored
+with the [WeatherDatabase](https://github.com/USDA-ARS-NWRC/WeatherDatabase) tool.
 Gridded weather models can be downloaded with the
 [weather_forecast_retrieval](https://github.com/USDA-ARS-NWRC/weather_forecast_retrieval)
 tool. This data is used as input for SMRF.
@@ -36,7 +36,7 @@ efficiency, and ability to run in near real time are high priorities.
 iSnobal is a gridded energy-balance snowmelt model. It predicts storage,
 runoff, and other snow state parameters. iSnobal is driven by the gridded
 forcing data like the data output from SMRF. PySnobal is a Python wrapped
-implementaion of iSnobal to allow for closer integration with other models
+implementation of iSnobal to allow for closer integration with other models
 and more run-time flexibility within the code.
 
 ### SNOWAV
@@ -53,17 +53,17 @@ spatial distribution visualization and summary tables.
 
 ### IPW
 Image Processing Workbench (IPW) is a collection of utilities to process digital
-images. IPW conatins the energy-balance models Snobal and iSnobal.
+images. IPW contains the energy-balance snowmelt models Snobal and iSnobal.
 
-### WeatherDatabase
+### Weather Database
 WeatherDatabase downloads and stores met. station data in an SQL database. It
 has the capability to maintain a raw data table, an auto cleaned data table,
 and a manually cleaned data table. This data can be read into SMRF for
 distribution over a specific domain.  
 
-### weather_forecast_retrieval
-Weather forecast retrieval gathers relavant gridded weather forecasts to ingest
-into physically based models for water supply forecasts
+### Weather Forecast Retrieval
+Weather forecast retrieval gathers relevant gridded weather forecasts to ingest
+into physically based models for water supply forecasts.
 
 ### inicheck
 inicheck is a high level configuration file checker enabling developers tight
@@ -72,5 +72,6 @@ control over their users configuration files.
 ###  basin_setup
 The basin setup tool is a python script designed to create the required inputs
 for running SMRF and AWSM simulations. The tool outputs a single netcdf file
-containing basin, mask, DEM, veg type and height (from Landfire), veg tau,
+containing the necessary spatial information for a water basin This includes
+basin mask, DEM, veg type and height (from Landfire), veg tau,
 and veg K.
