@@ -1,4 +1,4 @@
-![Overview Image](docs/_static/ModelSystemOverview.png?raw=true)
+![Overview Image](docs/_static/ModelSystemOverview_new.png?raw=true)
 
 ## Core Software
 
