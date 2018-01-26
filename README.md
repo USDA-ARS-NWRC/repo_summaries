@@ -1,4 +1,4 @@
-![Overview Image](docs/_static/ModelSystemOverview_AWSM.png?raw=true)
+![Overview Image](docs/_static/ModelSystemOverview.png?raw=true)
 
 ## Core Software
 
